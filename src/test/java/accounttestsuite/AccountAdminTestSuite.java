@@ -2,11 +2,11 @@ package accounttestsuite;
 
 import org.junit.Test;
 
-import accountmanagement.AccountAdministration;
+import accountmanagement.*;
 
 import static org.junit.Assert.*;
 
-public class TestSuite {
+public class AccountAdminTestSuite {
 
 	
 	@Test

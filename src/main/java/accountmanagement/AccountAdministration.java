@@ -10,7 +10,7 @@ public class AccountAdministration {
 
 	
 	public AccountAdministration(){
-		bankAccounts = new HashMap<>();
+		bankAccounts = new HashMap<String, Account>();
 	}
 
 	
@@ -22,5 +22,6 @@ public class AccountAdministration {
 	public void addAccount(String firstname, String surname, String accountNumber) {
 		this.bankAccounts.put(firstname, new Account(firstname, surname, accountNumber));
 	}
+
 	
 }
