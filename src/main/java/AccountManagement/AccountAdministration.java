@@ -1,4 +1,4 @@
-package AccountManagement;
+package accountmanagement;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,8 +9,8 @@ public class AccountAdministration {
 	public Map<String, Account> bankAccounts;
 
 	
-	AccountAdministration(){
-		bankAccounts = new HashMap<String, Account>();
+	public AccountAdministration(){
+		bankAccounts = new HashMap<>();
 	}
 
 	

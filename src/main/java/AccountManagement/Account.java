@@ -1,4 +1,4 @@
-package AccountManagement;
+package accountmanagement;
 
 
 public class Account {
@@ -12,10 +12,6 @@ public class Account {
 		this.setFirstName(firstname);
 		this.setLastName(surname);
 		this.setAccountNumber(accountNumber);
-	}
-	
-	Account(){
-		
 	}
 
 	public String getFirstName() {
