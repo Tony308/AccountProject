@@ -1,5 +1,7 @@
 package accounttestsuite;
 
+import static org.junit.Assert.*;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,8 +21,6 @@ public class TestAccountExists {
 	
 	@Test
 	public void UserAccCount() {
-		
-		assertEquals(3, main.searchForUsername());
-		
+		assertEquals(3, main.searchForUsername("John"));
 	}
 }
