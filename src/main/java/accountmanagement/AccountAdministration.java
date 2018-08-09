@@ -9,17 +9,16 @@ public class AccountAdministration {
 	public Map<Integer, Account> bankAccounts;
 
 	private int counter = 0;
-	private int nameCounter = 0;
 	
 	public AccountAdministration(){
 		bankAccounts = new HashMap<Integer, Account>();
 	}
 
 	
-	public Account retrieveAccount(String name) {
-		return bankAccounts.get(name);
-		
+	public Account retrieveAccount(int hashvalue) {
+		return bankAccounts.get(hashvalue);
 	}
+	
 	
 	public void addAccount(String firstname, String surname, String accountNumber) {
 		
@@ -27,16 +26,8 @@ public class AccountAdministration {
 		counter++;
 	}
 
-
-	public int searchForUsername(String firstname) {
-		for (int x = 0; x < bankAccounts.size(); x++) {
-			if (bankAccounts.get(x).getFirstName().equals(firstname)) {
-				nameCounter++;
-			}
-		}
-		return nameCounter;
+	public long searchForUsername(String firstname) {
+		return bankAccounts.values().stream().filter(bankAccounts -> bankAccounts.getFirstName().equals(firstname)).count();
 	}
 
-
-	
 }
